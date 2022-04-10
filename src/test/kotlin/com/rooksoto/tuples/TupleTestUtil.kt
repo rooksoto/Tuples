@@ -1,10 +1,11 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.utils.simpleName
 import java.util.UUID
 
 /**
  * This class and all its members are for internal testing
- * only, and should not be used.
+ * only, and should not be used outside of the Tuples project.
  */
 internal class TupleTestUtil {
 

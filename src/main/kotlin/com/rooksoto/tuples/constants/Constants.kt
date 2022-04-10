@@ -1,7 +1,7 @@
-package com.rooksoto.tuples
+package com.rooksoto.tuples.constants
 
 internal const val EMPTY_SIZE = 0
-internal const val UNIT_SIZE = 1
+internal const val ELEMENT_SIZE = 1
 internal const val PAIR_SIZE = 2
 internal const val TRIPLET_SIZE = 3
 internal const val QUARTET_SIZE = 4

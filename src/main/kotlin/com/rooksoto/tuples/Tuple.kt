@@ -1,36 +1,74 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.initializers.toTuple
+import com.rooksoto.tuples.utils.compareByCapacity
+import com.rooksoto.tuples.utils.normalized
+import com.rooksoto.tuples.utils.simpleName
+import com.rooksoto.tuples.utils.widenAndCompareTo
 import java.io.Serializable
 
 // Suppress HashCode undefined, since implementers are data classes
 @Suppress("EqualsOrHashCode")
 abstract class Tuple :
     Serializable,
-    Iterable<Any?>,
-    Comparable<Tuple> {
+    Comparable<Tuple>,
+    Collection<Any?> {
 
-    abstract val size: Int
+    abstract operator fun get(index: Int): Any?
 
-    abstract override fun equals(other: Any?): Boolean
+    override fun isEmpty(): Boolean = false
 
-    // TODO: Add support for Comparable<T>
+    override fun contains(element: Any?): Boolean {
+        forEach { value ->
+            if (value == element) {
+                return true
+            }
+        }
+        return false
+    }
+
+    override fun containsAll(elements: Collection<Any?>): Boolean {
+        elements.forEach { element ->
+            if (!contains(element)) {
+                return false
+            }
+        }
+        return true
+    }
+
+    /**
+     * Returns a comparison of this [Tuple] to the specified
+     * [other] [Tuple].
+     *
+     * Returns 1 if:
+     * - The other [Tuple] is has a smaller capacity
+     * than this [Tuple]
+     * - While comparing element by element, an
+     * item in this [Tuple] is greater than the element
+     * in the other [Tuple]'s corresponding position.
+     *
+     * Returns -1 if:
+     * - The other [Tuple] is has a larger capacity
+     * than this [Tuple]
+     * - While comparing element by element, an
+     * item in this [Tuple] is less than the element
+     * in the other [Tuple]'s corresponding position.
+     *
+     * Returns 0 if the two [Tuple]s have the same capacity
+     * and all elements in corresponding positions are equal.
+     */
     override fun compareTo(other: Tuple): Int {
         if (size != other.size) return compareByCapacity(other)
 
-        val thisList = toList()
-        val otherList = other.toList()
-
-        for (index in 0 until size) {
-            val thisItem = thisList[index]
-            val otherItem = otherList[index]
+        zip(other).forEach { (a, b) ->
             val bestGuess = when {
-                thisItem == null && otherItem == null -> 0
-                thisItem != null && otherItem == null -> 1
-                thisItem == null && otherItem != null -> -1
-                thisItem!!::class != otherItem!!::class -> thisItem.simpleName().compareTo(otherItem.simpleName()).normalized()
-                (thisItem is Number && otherItem is Number) -> thisItem.widenAndCompareTo(otherItem)
-                (thisItem is String && otherItem is String) -> thisItem.compareTo(otherItem).normalized()
-                else -> thisItem.toString().compareTo(otherItem.toString()).normalized()
+                a == null && b == null -> 0
+                a != null && b == null -> 1
+                a == null && b != null -> -1
+                a!!::class != b!!::class -> a.simpleName().compareTo(b.simpleName()).normalized()
+                (a is Number && b is Number) -> a.widenAndCompareTo(b)
+                (a is String && b is String) -> a.compareTo(b).normalized()
+                else -> a.toString().compareTo(b.toString()).normalized()
             }
             if (bestGuess != 0) return bestGuess
         }
@@ -38,18 +76,25 @@ abstract class Tuple :
         return 0
     }
 
+    /**
+     * Returns a [String] representation of this [Tuple].
+     */
     override fun toString(): String =
         when (this) {
-            is LabelValue<*, *> -> "${simpleName()}[$label : (${value?.simpleName()}) -> $value]"
-            is KeyValue<*, *> -> "${simpleName()}[(${key?.simpleName()}) -> $key : (${value?.simpleName()}) -> $value]"
+            is LabelValue<*, *> -> "${simpleName()}: [$label : (${value?.simpleName()}) -> $value]"
+            is KeyValue<*, *> -> "${simpleName()}: [(${key?.simpleName()}) -> $key : (${value?.simpleName()}) -> $value]"
             else -> joinToString(
-                prefix = "${simpleName()}[",
+                prefix = "${simpleName()}: [",
                 postfix = "]",
-                separator = " : ",
+                separator = ", ",
             ) { value ->
                 "(${value?.simpleName()}) -> $value"
             }
         }
 
+    /**
+     * Returns a [Tuple] comprising only the distinct elements of
+     * the original [Tuple].
+     */
     fun dropDuplicates() = toSet().toTuple()
 }
