@@ -1,4 +1,6 @@
-package com.rooksoto.tuples
+package com.rooksoto.tuples.utils
+
+import com.rooksoto.tuples.Tuple
 
 internal fun Any.simpleName(): String =
     this::class.java.simpleName
