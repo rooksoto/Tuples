@@ -43,6 +43,19 @@ class LabelValueTest : BaseTest() {
     }
 
     @Test
+    fun `Given a LabelValue, When toList(), Then result is List of value`() {
+        // GIVEN
+        val expected = listOf(testSubject.value)
+
+        // WHEN
+        val actual = testSubject.toList()
+
+        // THEN
+        actual shouldBeInstanceOf List::class
+        actual shouldBeEqualTo expected
+    }
+
+    @Test
     fun `Given a LabelValue, when contains, then expected result returned`() {
         // GIVEN
         val expected = true

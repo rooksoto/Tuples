@@ -145,6 +145,7 @@ internal class QuintetTest : BaseTest() {
         val actual = testSubject.toList()
 
         // THEN
+        actual shouldBeInstanceOf List::class
         actual shouldBeEqualTo expected
     }
 
