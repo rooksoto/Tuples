@@ -15,7 +15,7 @@ import com.rooksoto.tuples.Triplet
 import com.rooksoto.tuples.Tuple
 
 /**
- * Convenience method to create a [Tuple] of appropriate capacity,
+ * Convenience function to create a [Tuple] of appropriate capacity,
  * comprising the specified elements, up to 10.
  *
  * @param args The elements from which to create the [Tuple]
@@ -25,7 +25,7 @@ fun tupleOf(
 ): Tuple = args.toList().toTuple()
 
 /**
- * Convenience method to create a [Element] comprising the specified
+ * Convenience function to create a [Element] comprising the specified
  * element.
  *
  * @param first The element in the resulting [Element]
@@ -35,7 +35,7 @@ fun <A> elementOf(
 ) = Element(first)
 
 /**
- * Convenience method to create a [Pair] comprising the specified
+ * Convenience function to create a [Pair] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Pair]
@@ -47,7 +47,7 @@ fun <A, B> pairOf(
 ) = Pair(first, second)
 
 /**
- * Convenience method to create a [KeyValue] comprising the specified
+ * Convenience function to create a [KeyValue] comprising the specified
  * elements.
  *
  * @param key The key in the resulting [KeyValue]
@@ -59,7 +59,7 @@ fun <K, V> keyValueOf(
 ) = KeyValue(key, value)
 
 /**
- * Convenience method to create a [LabelValue] comprising the specified
+ * Convenience function to create a [LabelValue] comprising the specified
  * elements.
  *
  * @param label The key in the resulting [LabelValue]
@@ -71,7 +71,7 @@ fun <L, V> labelValueOf(
 ) = LabelValue(label, value)
 
 /**
- * Convenience method to create a [Triplet] comprising the specified
+ * Convenience function to create a [Triplet] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Triplet]
@@ -85,7 +85,7 @@ fun <A, B, C> tripletOf(
 ) = Triplet(first, second, third)
 
 /**
- * Convenience method to create a [Quartet] comprising the specified
+ * Convenience function to create a [Quartet] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Quartet]
@@ -101,7 +101,7 @@ fun <A, B, C, D> quartetOf(
 ) = Quartet(first, second, third, fourth)
 
 /**
- * Convenience method to create a [Quintet] comprising the specified
+ * Convenience function to create a [Quintet] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Quintet]
@@ -119,7 +119,7 @@ fun <A, B, C, D, E> quintetOf(
 ) = Quintet(first, second, third, fourth, fifth)
 
 /**
- * Convenience method to create a [Sextet] comprising the specified
+ * Convenience function to create a [Sextet] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Sextet]
@@ -139,7 +139,7 @@ fun <A, B, C, D, E, F> sextetOf(
 ) = Sextet(first, second, third, fourth, fifth, sixth)
 
 /**
- * Convenience method to create a [Septet] comprising the specified
+ * Convenience function to create a [Septet] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Septet]
@@ -161,7 +161,7 @@ fun <A, B, C, D, E, F, G> septetOf(
 ) = Septet(first, second, third, fourth, fifth, sixth, seventh)
 
 /**
- * Convenience method to create a [Octet] comprising the specified
+ * Convenience function to create a [Octet] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Octet]
@@ -185,7 +185,7 @@ fun <A, B, C, D, E, F, G, H> octetOf(
 ) = Octet(first, second, third, fourth, fifth, sixth, seventh, eighth)
 
 /**
- * Convenience method to create a [Ennead] comprising the specified
+ * Convenience function to create a [Ennead] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Ennead]
@@ -211,7 +211,7 @@ fun <A, B, C, D, E, F, G, H, I> enneadOf(
 ) = Ennead(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth)
 
 /**
- * Convenience method to create a [Decade] comprising the specified
+ * Convenience function to create a [Decade] comprising the specified
  * elements.
  *
  * @param first The first element in the resulting [Decade]
