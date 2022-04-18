@@ -88,7 +88,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(1) via indexing, then first returned`() {
+    fun `Given a Decade, when get(1) via indexing, then second returned`() {
         // GIVEN
         val expected = testSubject.second
 
@@ -100,7 +100,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(2) via indexing, then first returned`() {
+    fun `Given a Decade, when get(2) via indexing, then third returned`() {
         // GIVEN
         val expected = testSubject.third
 
@@ -112,7 +112,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(3) via indexing, then first returned`() {
+    fun `Given a Decade, when get(3) via indexing, then fourth returned`() {
         // GIVEN
         val expected = testSubject.fourth
 
@@ -124,7 +124,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(4) via indexing, then first returned`() {
+    fun `Given a Decade, when get(4) via indexing, then fifth returned`() {
         // GIVEN
         val expected = testSubject.fifth
 
@@ -136,7 +136,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(5) via indexing, then first returned`() {
+    fun `Given a Decade, when get(5) via indexing, then sixth returned`() {
         // GIVEN
         val expected = testSubject.sixth
 
@@ -148,7 +148,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(6) via indexing, then first returned`() {
+    fun `Given a Decade, when get(6) via indexing, then seventh returned`() {
         // GIVEN
         val expected = testSubject.seventh
 
@@ -160,7 +160,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(7) via indexing, then first returned`() {
+    fun `Given a Decade, when get(7) via indexing, then eighth returned`() {
         // GIVEN
         val expected = testSubject.eighth
 
@@ -172,7 +172,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(8) via indexing, then first returned`() {
+    fun `Given a Decade, when get(8) via indexing, then ninth returned`() {
         // GIVEN
         val expected = testSubject.ninth
 
@@ -184,7 +184,7 @@ internal class DecadeTest : BaseTest() {
     }
 
     @Test
-    fun `Given a Decade, when get(9) via indexing, then first returned`() {
+    fun `Given a Decade, when get(9) via indexing, then tenth returned`() {
         // GIVEN
         val expected = testSubject.tenth
 
