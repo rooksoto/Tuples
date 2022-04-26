@@ -17,7 +17,7 @@ ordinal (as opposed to index-based) semantics in certain circumstances, where it
 Some examples:
 
 - `Element` class vs `Unit` class (to avoid confusion with `Unit` in Kotlin)
-- `tripletOf(a, b, c)` vs`Triplet.with(a, b, c)`
+- `tripletOf(a, b, c)` vs `Triplet.with(a, b, c)`
 - `myTuple.first` vs `myTuple.getValue0()`
 - `myOtherTuple.dropSecond()` vs `myOtherTuple.removeFrom1()`
 
@@ -28,8 +28,8 @@ Should you find it useful, [drop me a line](mailto:rooksoto@gmail.com). I'd be v
 
 - Finish this README.
 - Add KDocs for each of the Tuple classes.
-- Add homogenous Tuple implementation?.
-- Add `HenDecade` and `Dozen` classes?.
-- Rename `Ennead` `Nonet`?
+- Add homogenous Tuple implementation?
+- Add `HenDecade` and `Dozen` classes?
+- Rename `Ennead` to `Nonet`?
 
 #### Made with ❤️ in Connecticut, USA by Rook Soto.
