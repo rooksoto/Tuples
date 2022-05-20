@@ -41,15 +41,15 @@ abstract class Tuple :
      * [other] [Tuple].
      *
      * Returns 1 if:
-     * - The other [Tuple] is has a smaller capacity
-     * than this [Tuple]
+     * - The other [Tuple] has a smaller capacity than
+     * this [Tuple]
      * - While comparing element by element, an
      * item in this [Tuple] is greater than the element
      * in the other [Tuple]'s corresponding position.
      *
      * Returns -1 if:
-     * - The other [Tuple] is has a larger capacity
-     * than this [Tuple]
+     * - The other [Tuple] has a larger capacity than
+     * this [Tuple]
      * - While comparing element by element, an
      * item in this [Tuple] is less than the element
      * in the other [Tuple]'s corresponding position.
