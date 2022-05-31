@@ -1,10 +1,8 @@
 package com.rooksoto.tuples
 
 import com.rooksoto.tuples.initializers.toTuple
-import com.rooksoto.tuples.utils.compareByCapacity
-import com.rooksoto.tuples.utils.normalized
+import com.rooksoto.tuples.utils.internalCompareTo
 import com.rooksoto.tuples.utils.simpleName
-import com.rooksoto.tuples.utils.widenAndCompareTo
 import java.io.Serializable
 
 // Suppress HashCode undefined, since implementers are data classes
@@ -57,24 +55,8 @@ abstract class Tuple :
      * Returns 0 if the two [Tuple]s have the same capacity
      * and all elements in corresponding positions are equal.
      */
-    override fun compareTo(other: Tuple): Int {
-        if (size != other.size) return compareByCapacity(other)
-
-        zip(other).forEach { (a, b) ->
-            val bestGuess = when {
-                a == null && b == null -> 0
-                a != null && b == null -> 1
-                a == null && b != null -> -1
-                a!!::class != b!!::class -> a.simpleName().compareTo(b.simpleName()).normalized()
-                (a is Number && b is Number) -> a.widenAndCompareTo(b)
-                (a is String && b is String) -> a.compareTo(b).normalized()
-                else -> a.toString().compareTo(b.toString()).normalized()
-            }
-            if (bestGuess != 0) return bestGuess
-        }
-
-        return 0
-    }
+    override fun compareTo(other: Tuple): Int =
+        internalCompareTo(other)
 
     /**
      * Returns a [String] representation of this [Tuple].
