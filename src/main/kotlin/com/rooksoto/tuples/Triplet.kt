@@ -45,10 +45,6 @@ data class Triplet<A, B, C>(
             else -> throw TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<*> =
-        arrayOf(first, second, third)
-            .iterator()
-
     override fun toPair(): Pair<A, B> =
         Pair(first, second)
 

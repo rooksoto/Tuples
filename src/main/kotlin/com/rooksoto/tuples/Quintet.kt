@@ -53,10 +53,6 @@ data class Quintet<A, B, C, D, E>(
             else -> throw TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<*> =
-        arrayOf(first, second, third, fourth, fifth)
-            .iterator()
-
     override fun toQuartet(): Quartet<A, B, C, D> =
         Quartet(first, second, third, fourth)
 

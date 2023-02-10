@@ -39,10 +39,6 @@ data class Element<A>(
             else -> throw TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<A> =
-        listOf(first)
-            .iterator()
-
     override fun <T> add(value: T): Pair<A, T> =
         Pair(first, value)
 

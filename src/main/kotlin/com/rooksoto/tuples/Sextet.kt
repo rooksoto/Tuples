@@ -57,10 +57,6 @@ data class Sextet<A, B, C, D, E, F>(
             else -> TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<*> =
-        arrayOf(first, second, third, fourth, fifth, sixth)
-            .iterator()
-
     override fun toQuintet(): Quintet<A, B, C, D, E> =
         Quintet(first, second, third, fourth, fifth)
 

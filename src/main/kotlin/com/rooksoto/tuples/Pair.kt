@@ -47,10 +47,6 @@ data class Pair<A, B>(
             else -> throw TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<*> =
-        arrayOf(first, second)
-            .iterator()
-
     override fun toElement(): Element<A> =
         Element(first)
 

@@ -69,10 +69,6 @@ data class Decade<A, B, C, D, E, F, G, H, I, J>(
             else -> TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<*> =
-        arrayOf(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth)
-            .iterator()
-
     override fun toEnnead(): Ennead<A, B, C, D, E, F, G, H, I> =
         Ennead(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth)
 

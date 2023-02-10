@@ -49,10 +49,6 @@ data class KeyValue<K, V>(
     override fun containsAll(elements: Collection<Any?>): Boolean =
         elements.size == 1 && elements.contains(value)
 
-    override fun iterator(): Iterator<V> =
-        listOf(value)
-            .iterator()
-
     override fun toElement(): Element<V> =
         Element(value)
 

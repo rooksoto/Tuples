@@ -14,6 +14,8 @@ abstract class Tuple :
 
     abstract operator fun get(index: Int): Any?
 
+    override fun iterator(): TupleIterator = TupleIterator(this)
+
     override fun isEmpty(): Boolean = false
 
     override fun contains(element: Any?): Boolean {
@@ -79,4 +81,26 @@ abstract class Tuple :
      * the original [Tuple].
      */
     fun dropDuplicates() = toSet().toTuple()
+}
+
+/**
+ * Creates a typesafe [Iterator] for the [Tuple].
+ */
+class TupleIterator(
+    private val tuple: Tuple
+) : Iterator<Any?> {
+
+    private var index = 0
+
+    /**
+     * Returns the next element in the [Tuple] iteration.
+     */
+    override fun next(): Any? =
+        tuple[index++]
+
+    /**
+     * Returns `true` if the [Tuple] iteration has more elements.
+     */
+    override fun hasNext(): Boolean =
+        index < tuple.size
 }

@@ -69,10 +69,6 @@ data class Ennead<A, B, C, D, E, F, G, H, I>(
             else -> TupleIndexOutOfBoundsException(simpleName(), index, size)
         }
 
-    override fun iterator(): Iterator<*> =
-        arrayOf(first, second, third, fourth, fifth, sixth, seventh, eighth, ninth)
-            .iterator()
-
     override fun toOctet(): Octet<A, B, C, D, E, F, G, H> =
         Octet(first, second, third, fourth, fifth, sixth, seventh, eighth)
 

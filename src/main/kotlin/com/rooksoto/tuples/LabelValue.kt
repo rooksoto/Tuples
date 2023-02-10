@@ -37,10 +37,6 @@ data class LabelValue<L, V>(
     override val size: Int =
         ELEMENT_SIZE
 
-    override fun iterator(): Iterator<V> =
-        listOf(value)
-            .iterator()
-
     override fun get(index: Int): Any? =
         when (index) {
             0 -> value
