@@ -1,6 +1,6 @@
 package com.rooksoto.tuples
 
-import com.rooksoto.tuples.constants.ELEMENT_SIZE
+import com.rooksoto.tuples.constants.LABEL_VALUE_SIZE
 import com.rooksoto.tuples.exceptions.TupleIndexOutOfBoundsException
 import com.rooksoto.tuples.interfaces.ConvertsToElement
 import com.rooksoto.tuples.interfaces.ConvertsToKeyValue
@@ -35,7 +35,7 @@ data class LabelValue<L, V>(
     ReplacesValue {
 
     override val size: Int =
-        ELEMENT_SIZE
+        LABEL_VALUE_SIZE
 
     override fun get(index: Int): Any? =
         when (index) {
