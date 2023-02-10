@@ -1,7 +1,5 @@
 package com.rooksoto.tuples
 
-import org.amshove.kluent.shouldBe
-import org.amshove.kluent.shouldBeEqualTo
 import org.junit.jupiter.api.Test
 
 class EqualityTest : BaseTest() {

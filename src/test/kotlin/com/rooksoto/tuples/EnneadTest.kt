@@ -1,8 +1,6 @@
 package com.rooksoto.tuples
 
 import com.rooksoto.tuples.utils.simpleName
-import org.amshove.kluent.shouldBeEqualTo
-import org.amshove.kluent.shouldBeInstanceOf
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
