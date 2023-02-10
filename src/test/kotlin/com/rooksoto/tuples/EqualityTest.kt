@@ -50,7 +50,7 @@ class EqualityTest : BaseTest() {
     }
 
     @Test
-    fun `Given 2 Tuples of same capacity created from different values, When compared for equality, Then Tuples are not`() {
+    fun `Given 2 Tuples of same capacity created from different values, When compared for equality, Then Tuples are not equal`() {
         // GIVEN
         val testSubject1 = Quintet(1, 2, 3, 4, 5)
         val testSubject2 = Quintet(6, 7, 8, 9, 10)
