@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.ENNEAD_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -26,7 +27,7 @@ internal class EnneadTest : BaseTest() {
     @Test
     fun `Given a Ennead, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 9
+        val expected = ENNEAD_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -38,7 +39,7 @@ internal class EnneadTest : BaseTest() {
     @Test
     fun `Given a Ennead, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 9
+        val expected = ENNEAD_SIZE
 
         // WHEN
         val actual = testSubject.count()

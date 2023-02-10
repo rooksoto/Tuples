@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.DECADE_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -27,7 +28,7 @@ internal class DecadeTest : BaseTest() {
     @Test
     fun `Given a Decade, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 10
+        val expected = DECADE_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -39,7 +40,7 @@ internal class DecadeTest : BaseTest() {
     @Test
     fun `Given a Decade, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 10
+        val expected = DECADE_SIZE
 
         // WHEN
         val actual = testSubject.count()

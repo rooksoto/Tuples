@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.QUINTET_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -22,7 +23,7 @@ internal class QuintetTest : BaseTest() {
     @Test
     fun `Given a Quintet, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 5
+        val expected = QUINTET_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -34,7 +35,7 @@ internal class QuintetTest : BaseTest() {
     @Test
     fun `Given a Quintet, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 5
+        val expected = QUINTET_SIZE
 
         // WHEN
         val actual = testSubject.count()

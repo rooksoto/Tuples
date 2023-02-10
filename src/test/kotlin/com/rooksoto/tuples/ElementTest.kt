@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.ELEMENT_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -18,7 +19,7 @@ internal class ElementTest : BaseTest() {
     @Test
     fun `Given a Element, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 1
+        val expected = ELEMENT_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -30,7 +31,7 @@ internal class ElementTest : BaseTest() {
     @Test
     fun `Given a Element, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 1
+        val expected = ELEMENT_SIZE
 
         // WHEN
         val actual = testSubject.count()

@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.PAIR_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -19,7 +20,7 @@ internal class PairTest : BaseTest() {
     @Test
     fun `Given a Pair, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 2
+        val expected = PAIR_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -31,7 +32,7 @@ internal class PairTest : BaseTest() {
     @Test
     fun `Given a Pair, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 2
+        val expected = PAIR_SIZE
 
         // WHEN
         val actual = testSubject.count()

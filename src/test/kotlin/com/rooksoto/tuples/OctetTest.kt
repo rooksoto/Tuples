@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.OCTET_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -25,7 +26,7 @@ internal class OctetTest : BaseTest() {
     @Test
     fun `Given a Octet, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 8
+        val expected = OCTET_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -37,7 +38,7 @@ internal class OctetTest : BaseTest() {
     @Test
     fun `Given a Octet, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 8
+        val expected = OCTET_SIZE
 
         // WHEN
         val actual = testSubject.count()

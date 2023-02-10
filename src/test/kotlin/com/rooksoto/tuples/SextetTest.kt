@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.SEXTET_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -23,7 +24,7 @@ internal class SextetTest : BaseTest() {
     @Test
     fun `Given a Sextet, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 6
+        val expected = SEXTET_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -35,7 +36,7 @@ internal class SextetTest : BaseTest() {
     @Test
     fun `Given a Sextet, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 6
+        val expected = SEXTET_SIZE
 
         // WHEN
         val actual = testSubject.count()

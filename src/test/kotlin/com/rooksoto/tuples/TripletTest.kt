@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.TRIPLET_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -20,7 +21,7 @@ internal class TripletTest : BaseTest() {
     @Test
     fun `Given a Triplet, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 3
+        val expected = TRIPLET_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -32,7 +33,7 @@ internal class TripletTest : BaseTest() {
     @Test
     fun `Given a Triplet, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 3
+        val expected = TRIPLET_SIZE
 
         // WHEN
         val actual = testSubject.count()

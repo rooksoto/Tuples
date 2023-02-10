@@ -1,5 +1,6 @@
 package com.rooksoto.tuples
 
+import com.rooksoto.tuples.constants.LABEL_VALUE_SIZE
 import com.rooksoto.tuples.utils.simpleName
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -19,7 +20,7 @@ class LabelValueTest : BaseTest() {
     @Test
     fun `Given a LabelValue, When size, Then expected size returned`() {
         // GIVEN
-        val expected = 1
+        val expected = LABEL_VALUE_SIZE
 
         // WHEN
         val actual = testSubject.size
@@ -31,7 +32,7 @@ class LabelValueTest : BaseTest() {
     @Test
     fun `Given a LabelValue, When count(), Then expected count returned`() {
         // GIVEN
-        val expected = 1
+        val expected = LABEL_VALUE_SIZE
 
         // WHEN
         val actual = testSubject.count()
